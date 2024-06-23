@@ -1,6 +1,6 @@
 Make sure you are running this app with Java 22.
 
-Replace your database credentials here:
+Replace your database credentials here "src/main/resources/configurations/msvc-cinemavip.yml":
 ![image](https://github.com/ACanto-30/cinemavip-api/assets/141590298/c4dd5cdb-5ebc-4249-b03b-a4b26637a964)
 
 
