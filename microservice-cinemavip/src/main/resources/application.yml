@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: msvc-cinemavip
+  config:
+    import: optional:configserver:http://localhost:8888
+  messages:
+    basename: translations/fields
+    encoding: UTF-8
+    fallback-to-system-locale: false
+  sql:
+    init:
+      mode: always
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
+      springframework: DEBUG
