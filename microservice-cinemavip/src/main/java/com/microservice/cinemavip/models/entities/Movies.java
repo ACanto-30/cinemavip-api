@@ -54,7 +54,7 @@ public class Movies {
     @OneToMany(mappedBy = "movie", fetch = FetchType.LAZY)
     private List<Showtimes> showtimes;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_classification", nullable = false)
     private Classifications classification;
 

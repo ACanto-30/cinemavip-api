@@ -34,6 +34,6 @@ public class MoviesDTO {
 
     String trailerTitle;
 
-    ClassificationsDTO idClassification;
+    ClassificationsDTO classification;
 
 }

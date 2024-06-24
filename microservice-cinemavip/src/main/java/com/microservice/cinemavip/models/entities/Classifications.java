@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
+import java.util.List;
+
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
@@ -33,6 +35,6 @@ public class Classifications {
     @Column(nullable = false)
     String image;
 
-    @OneToOne(mappedBy = "classification", fetch = FetchType.LAZY)
-    private Movies movie;
+    @OneToMany(mappedBy = "classification", fetch = FetchType.LAZY)
+    private List<Movies> movie;
 }

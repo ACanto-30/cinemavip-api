@@ -38,7 +38,7 @@ public class MoviesImplementationService implements IMoviesService {
             modelMapper.createTypeMap(Classifications.class, ClassificationsDTO.class);
 
             modelMapper.typeMap(Movies.class, MoviesDTO.class).addMappings(mapper -> {
-                mapper.skip(MoviesDTO::setIdClassification);
+                mapper.skip(MoviesDTO::setClassification);
             });
 
 
@@ -58,7 +58,7 @@ public class MoviesImplementationService implements IMoviesService {
             ModelMapper modelMapper = new ModelMapper();
             modelMapper.createTypeMap(Classifications.class, ClassificationsDTO.class);
             modelMapper.typeMap(Movies.class, MoviesDTO.class).addMappings(mapper -> {
-                mapper.map(src -> src.getClassification(), MoviesDTO::setIdClassification);
+                mapper.map(src -> src.getClassification(), MoviesDTO::setClassification);
             });
 
             MoviesDTO movieDTO = modelMapper.map(movie, MoviesDTO.class);
