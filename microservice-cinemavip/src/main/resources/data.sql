@@ -57,6 +57,7 @@ INSERT INTO Seats (position) VALUES ('D6');
 
 INSERT INTO Theaters (theater_number) VALUES ('1');
 INSERT INTO Theaters (theater_number) VALUES ('2');
+INSERT INTO Theaters (theater_number) VALUES ('3');
 
 INSERT INTO Showtimes (showtime_date, id_theater, id_movie) VALUES ('2024-07-03', 1, 1);
 INSERT INTO Showtimes (showtime_date, id_theater, id_movie) VALUES ('2024-07-04', 1, 1);
