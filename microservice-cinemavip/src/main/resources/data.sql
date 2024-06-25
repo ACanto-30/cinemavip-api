@@ -1,4 +1,4 @@
-SET FOREIGN_KEY_CHECKS = 0;
+/*SET FOREIGN_KEY_CHECKS = 0;
 TRUNCATE TABLE Movies;
 TRUNCATE TABLE Classifications;
 TRUNCATE TABLE Theaters;
@@ -155,7 +155,7 @@ INSERT INTO Users (email, first_name, last_name) VALUES ('Ken@mc.com', 'Ken', 'j
 INSERT INTO Users (email, first_name, last_name) VALUES ('Barbie@mc.com', 'Barbie', 'Delena');
 INSERT INTO Users (email, first_name, last_name) VALUES ('Leonel@paris.com', 'Leonel', 'Messi');
 INSERT INTO Users (email, first_name, last_name) VALUES ('Cristiano@dubai.com', 'Cristiano', 'Ronaldo');
-INSERT INTO Users (email, first_name, last_name) VALUES ('Keylor@nabas.com', 'Keylor', 'Nabas');
+INSERT INTO Users (email, first_name, last_name) VALUES ('Keylor@nabas.com', 'Keylor', 'Nabas');*/
 
 
 
