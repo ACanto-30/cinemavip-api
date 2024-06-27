@@ -147,3 +147,5 @@ G.idea/sonarlint/issuestore/6/5/651308ec349440c89de81b7ff1320e523cad349c,3\b\3b
 Q.idea/sonarlint/securityhotspotstore/6/5/651308ec349440c89de81b7ff1320e523cad349c,8\9\89ebe09bc46b48cc66bbeed56a1f223fdba361ef
 ê
 `microservice-cinemavip/src/main/java/com/microservice/cinemavip/controllers/SeatsController.java,9\9\9911f28eefb07f7c181f74b604b74e7e953e77ba
+ö
+jmicroservice-cinemavip/src/test/java/com/microservice/cinemavip/MicroserviceCinemavipApplicationTests.java,a\4\a45c6d80633ff20ab3437872d0d352c9334fbf4b

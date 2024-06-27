@@ -1,4 +1,4 @@
-/*SET FOREIGN_KEY_CHECKS = 0;
+SET FOREIGN_KEY_CHECKS = 0;
 TRUNCATE TABLE Movies;
 TRUNCATE TABLE Classifications;
 TRUNCATE TABLE Theaters;
@@ -11,6 +11,7 @@ TRUNCATE TABLE Showtimes;
 TRUNCATE TABLE Tickets;
 TRUNCATE TABLE Users;
 SET FOREIGN_KEY_CHECKS = 1;
+
 
 INSERT INTO Classifications (classification_name, minimum_age, recommendation, summary, image) VALUES ('AA', 'Todo público', 'Apto para todo público, dirigido a niños', 'Dirigidas a público más preescolar', 'https://github.com/ACanto-30/files/blob/master/Files/cinemavip-files/Resized/AA_80x60.png?raw=true');
 INSERT INTO Classifications (classification_name, minimum_age, recommendation, summary, image) VALUES ('A', 'Todo público', 'Apto para todo público, se permite la entrada a niños menores a 7 años con un adulto, y mayores se recomienda la supervisión de un adulto', 'Peliculas infantiles con nula violencia', 'https://github.com/ACanto-30/files/blob/master/Files/cinemavip-files/Resized/A_80x60.png?raw=true');
@@ -155,7 +156,7 @@ INSERT INTO Users (email, first_name, last_name) VALUES ('Ken@mc.com', 'Ken', 'j
 INSERT INTO Users (email, first_name, last_name) VALUES ('Barbie@mc.com', 'Barbie', 'Delena');
 INSERT INTO Users (email, first_name, last_name) VALUES ('Leonel@paris.com', 'Leonel', 'Messi');
 INSERT INTO Users (email, first_name, last_name) VALUES ('Cristiano@dubai.com', 'Cristiano', 'Ronaldo');
-INSERT INTO Users (email, first_name, last_name) VALUES ('Keylor@nabas.com', 'Keylor', 'Nabas');*/
+INSERT INTO Users (email, first_name, last_name) VALUES ('Keylor@nabas.com', 'Keylor', 'Nabas');
 
 
 
