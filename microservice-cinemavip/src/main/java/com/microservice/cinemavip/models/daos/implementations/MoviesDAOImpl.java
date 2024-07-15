@@ -17,7 +17,8 @@ public class MoviesDAOImpl implements IMoviesDAO {
 
     @Override
     public List<Movies> listAllMovies() {
-        String jpql = "SELECT m FROM Movies m";
+        String jpql = "SELECT m FROM Movies m " +
+                "WHERE m.releaseDate <= CURRENT_DATE";
         TypedQuery<Movies> query = em.createQuery(jpql, Movies.class);
         return query.getResultList();
     }
@@ -25,5 +26,13 @@ public class MoviesDAOImpl implements IMoviesDAO {
     @Override
     public Movies getMovieById(int id) {
         return em.find(Movies.class, id);
+    }
+
+    @Override
+    public List<Movies> listComingSoonMovies() {
+        String jpql = "SELECT m FROM Movies m " +
+                "WHERE  m.releaseDate >= CURRENT_DATE";
+        TypedQuery<Movies> query = em.createQuery(jpql, Movies.class);
+        return query.getResultList();
     }
 }

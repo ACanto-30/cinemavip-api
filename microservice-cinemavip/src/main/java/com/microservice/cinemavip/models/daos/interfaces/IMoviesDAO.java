@@ -7,4 +7,5 @@ import java.util.List;
 public interface IMoviesDAO {
     List<Movies> listAllMovies();
     Movies getMovieById(int id);
+    List<Movies> listComingSoonMovies();
 }

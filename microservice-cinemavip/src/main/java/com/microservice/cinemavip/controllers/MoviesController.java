@@ -18,6 +18,12 @@ public class MoviesController {
         return moviesService.listAllMovies();
     }
 
+    @GetMapping("comingsoon/movies")
+    public ResponseEntity<?> listComingSoonMovies()
+    {
+        return moviesService.listAllComingSoonMovies();
+    }
+
     @GetMapping("movie/{id}")
     public ResponseEntity<?> getMovieById(@PathVariable int id)
     {

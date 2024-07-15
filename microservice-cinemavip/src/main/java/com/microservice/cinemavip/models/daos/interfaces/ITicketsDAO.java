@@ -7,4 +7,5 @@ import java.util.List;
 public interface ITicketsDAO {
     Tickets getLastTicketByUser(Users user);
     List<Tickets> getAllTicketsByUser(Users user);
+    Tickets getTicketById(int id);
 }

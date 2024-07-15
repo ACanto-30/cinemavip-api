@@ -78,5 +78,26 @@ public class TicketsImplementationService implements ITicketsService {
             return new ResponseEntity<>(responses.getNoTicketsUser(), HttpStatus.NOT_FOUND);
     }
 
+    @Override
+    public ResponseEntity<?> getTicketById(int id) {
+        Tickets ticket = ticketsDAO.getTicketById(id);
+        if (ticket != null) {
+            ModelMapper modelMapper = new ModelMapper();
+            modelMapper.createTypeMap(Tickets.class, TicketsDTO.class);
+            modelMapper.createTypeMap(ShowtimeHours.class, ShowtimeHoursDTO.class);
+            modelMapper.createTypeMap(Users.class, UsersTicketDTO.class);
+            modelMapper.createTypeMap(Showtimes.class, ShowtimesTicketsDTO.class);
+            modelMapper.createTypeMap(Movies.class, MoviesShowtimesDTO.class);
+            modelMapper.createTypeMap(Theaters.class, TheatersDTO.class);
+            modelMapper.createTypeMap(ReservedSeats.class, ReservedSeatsDTO.class);
+            modelMapper.createTypeMap(Seats.class, SeatsDTO.class);
+
+            TicketsSeatsDTO ticketDTO = modelMapper.map(ticket, TicketsSeatsDTO.class);
+            return new ResponseEntity<>(ticketDTO, HttpStatus.OK);
+        }
+        else
+            return new ResponseEntity<>(responses.getNoTicketsUser(), HttpStatus.NOT_FOUND);
+    }
+
 
 }

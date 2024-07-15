@@ -49,4 +49,13 @@ public class TicketsDAOImpl implements ITicketsDAO {
         return query.getResultList();
     }
 
+    @Override
+    public Tickets getTicketById(int id) {
+        String jpql = "SELECT t FROM Tickets t " +
+                "WHERE t.idTicket = :idTicket";
+        TypedQuery<Tickets> query = em.createQuery(jpql, Tickets.class)
+                .setParameter("idTicket", id);
+        return query.getSingleResult();
+    }
+
 }

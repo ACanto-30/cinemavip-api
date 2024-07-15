@@ -67,5 +67,27 @@ public class MoviesImplementationService implements IMoviesService {
             return new ResponseEntity<>(responses.getNoContentResponseById("pelicula", movieId), HttpStatus.NOT_FOUND);
         }
     }
+
+    @Override
+    public ResponseEntity<?> listAllComingSoonMovies() {
+        List <Movies> moviesList = moviesDAO.listComingSoonMovies();
+        ModelMapper modelMapper = new ModelMapper();
+
+        if(moviesList.isEmpty())
+            return new ResponseEntity<>(responses.getNoContentResponseListAll("peliculas"), HttpStatus.NOT_FOUND);
+        else{
+            modelMapper.createTypeMap(Classifications.class, ClassificationsDTO.class);
+
+            modelMapper.typeMap(Movies.class, MoviesDTO.class).addMappings(mapper -> {
+                mapper.skip(MoviesDTO::setClassification);
+            });
+
+
+            List<MoviesDTO> moviesDTOList = moviesList.stream()
+                    .map(movie -> modelMapper.map(movie, MoviesDTO.class))
+                    .collect(Collectors.toList());
+            return new ResponseEntity<>(moviesDTOList, HttpStatus.OK);
+        }
+    }
 }
 

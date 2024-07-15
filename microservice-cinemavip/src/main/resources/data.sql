@@ -1,4 +1,4 @@
-SET FOREIGN_KEY_CHECKS = 0;
+/*SET FOREIGN_KEY_CHECKS = 0;
 TRUNCATE TABLE Movies;
 TRUNCATE TABLE Classifications;
 TRUNCATE TABLE Theaters;
@@ -180,4 +180,4 @@ INSERT INTO Reserved_Seats (id_seat, id_ticket) VALUES (6, 2);
 INSERT INTO Reserved_Seats (id_seat, id_ticket) VALUES (8, 7);
 INSERT INTO Reserved_Seats (id_seat, id_ticket) VALUES (7, 7);
 INSERT INTO Reserved_Seats (id_seat, id_ticket) VALUES (5, 9);
-INSERT INTO Reserved_Seats (id_seat, id_ticket) VALUES (3, 9);
+INSERT INTO Reserved_Seats (id_seat, id_ticket) VALUES (3, 9);*/
